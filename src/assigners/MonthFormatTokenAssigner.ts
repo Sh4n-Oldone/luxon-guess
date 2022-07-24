@@ -17,11 +17,11 @@ class MonthFormatTokenAssigner implements IAssigner {
 		this._map = new Map();
 
 		if (!format || format === 'default') {
-			this._map.set(/\d{1,2}/, 'M');
-			this._map.set(/\d{2}/, 'MM');
-			this._map.set(/\d{1,2}(?:st|nd|rd|th)/, 'Mo');
-			this._map.set(/^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)$/, 'MMM');
-			this._map.set(/^(January|February|March|April|May|June|July|August|September|October|November|December)$/, 'MMMM');
+			this._map.set(/\d{1,2}/, 'L');
+			this._map.set(/\d{2}/, 'LL');
+			this._map.set(/\d{1,2}(?:st|nd|rd|th)/, 'LL');
+			this._map.set(/^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)$/, 'LLL');
+			this._map.set(/^(January|February|March|April|May|June|July|August|September|October|November|December)$/, 'LLLL');
 		} else {
 			this._map.set(/\d{1,2}/, 'NA');
 			this._map.set(/\d{2}/, '%m');

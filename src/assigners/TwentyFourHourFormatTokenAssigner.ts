@@ -17,8 +17,8 @@ class TwentyFourHourFormatTokenAssigner implements IAssigner {
 		this._map = new Map();
 
 		if (!format || format === 'default') {
-			this._map.set(/^(\d|1\d|2[0-3])$/, 'H');
-			this._map.set(/^([0-1]\d|2[0-3])$/, 'HH');
+			this._map.set(/^(\d|1\d|2[0-3])$/, 'T');
+			this._map.set(/^([0-1]\d|2[0-3])$/, 'T');
 		} else {
 			this._map.set(/^(\d|1\d|2[0-3])$/, '%-k');
 			this._map.set(/^([0-1]\d|2[0-3])$/, '%H');

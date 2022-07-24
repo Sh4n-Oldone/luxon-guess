@@ -17,7 +17,7 @@ class ISODayOfWeekFormatTokenAssigner implements IAssigner {
 		this._map = new Map();
 
 		if (!format || format === 'default') {
-			this._map.set(/[1-7]/, 'E');
+			this._map.set(/[1-7]/, 'c');
 		} else {
 			this._map.set(/[1-7]/, '%u');
 		}

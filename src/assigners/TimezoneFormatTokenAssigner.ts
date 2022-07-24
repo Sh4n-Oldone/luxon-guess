@@ -67,17 +67,17 @@ class TimezoneFormatTokenAssigner implements IAssigner {
 
 			// Treat these as escaped text
 			this._map.set(/Z/, '[Z]');
-			this._map.set(/z/, '[z]');
+			this._map.set(/z/, '[Z]');
 
 
-			this._map.set(abbreviatedTimezoneRegex, 'z');
+			this._map.set(abbreviatedTimezoneRegex, 'Z');
 		} else {
-			this._map.set(/[+-]\d{2}(?::\d{2})?/, '%:z');
-			this._map.set(/[+-]\d{4}/, '%z');
+			this._map.set(/[+-]\d{2}(?::\d{2})?/, '%:Z');
+			this._map.set(/[+-]\d{4}/, '%Z');
 
 			// Treat these as escaped text
 			this._map.set(/Z/, 'Z');
-			this._map.set(/z/, 'z');
+			this._map.set(/z/, 'Z');
 
 			this._map.set(abbreviatedTimezoneRegex, '%Z');
 		}

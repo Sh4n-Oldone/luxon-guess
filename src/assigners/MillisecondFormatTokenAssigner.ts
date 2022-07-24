@@ -18,7 +18,7 @@ class MillisecondFormatTokenAssigner implements IAssigner {
 
 		if (!format || format === 'default') {
 			this._map.set(/\d/, 'S');
-			this._map.set(/\d{2}/, 'SS');
+			this._map.set(/\d{2}/, 'SSS');
 			this._map.set(/\d{3}/, 'SSS');
 		} else {
 			this._map.set(/\d/, 'NA');
